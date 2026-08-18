@@ -1,0 +1,34 @@
+{
+  "name": "@credivis/elixir-sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for Elixir — auth entry assembly, client-side simulation, and contract bindings",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Credivis-Labs/Elixir-SDK.git"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./auth": "./dist/auth/index.js",
+    "./simulate": "./dist/simulate/index.js",
+    "./classic": "./dist/classic/index.js"
+  },
+  "files": ["dist"],
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^16.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
